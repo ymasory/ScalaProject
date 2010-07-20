@@ -9,7 +9,7 @@ This project is a "dummy" Scala project you can use as a starting point for your
 Getting started
 ===============
 
-You **do** need Ant and Java 5+ installed and available at the command line. You do **not** need Scala or ScalaTest. It is already provided and configured.
+You **do** need Ant and Java 5+ installed and available at the command line. You do **not** need Scala or ScalaTest. They are already provided and configured.
 
 From the command line:
 
