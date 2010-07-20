@@ -122,7 +122,7 @@
       <jvmarg value="-Xms32M"/>
       <jvmarg value="-cp"/>
       <jvmarg value="${jline.jar}:${scala-compiler.jar}:${scala-dbc.jar}:${scala-library.jar}:${scalap.jar}:${scala-swing}.jar:${scala-swing.jar}"/>
-      <jvmarg value="-Dscala.home=/home/yuvi/scala-2.8.0.final"/>
+      <jvmarg value="-Dscala.home=."/>
       <arg value="-cp"/>
       <arg value="${bin}"/>
       <arg value="${entrypoint.name}"/>
