@@ -42,14 +42,14 @@
       </fileset>
     </path>
     
+    <taskdef resource="scala/tools/ant/antlib.xml">
+      <classpath refid="build.classpath"/>
+    </taskdef>
+
     <path id="run.classpath">
       <path refid="build.classpath"/>
       <pathelement location="${bin}"/>
     </path>
-
-    <taskdef resource="scala/tools/ant/antlib.xml">
-      <classpath refid="build.classpath"/>
-    </taskdef>
   </target>
 
   <!-- compile program -->
