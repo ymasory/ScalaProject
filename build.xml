@@ -18,7 +18,7 @@
          name="My awesome Scala program!" 
          basedir=".">
 
-  <!-- !!! CHANGE THIS TO THE NAME OF YOUR SINGLETON OBJECT CONTAINING "main" !!! -->
+  <!-- If you change the entry point of your program from MyProgram you must change this value! -->
   <property name="entrypoint.name"
             value="MyProgram"/> 
 
