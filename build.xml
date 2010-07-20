@@ -18,6 +18,9 @@
          name="My awesome Scala program!" 
          basedir=".">
 
+  <property name="entrypoint.name"
+            value="MyProgram"/>
+
   <!-- relative path variables -->
   <property name="bin" 
             location="bin"/>
@@ -30,9 +33,20 @@
   <property name="doc"
             location="doc"/>
 
-  <!-- location of MyProgram's entry point -->
-  <property name="main"
-            location="${bin}/MyProgram"/>
+  <!-- Scala libs, spelled out -->
+  <property name="jline.jar"
+            value="${lib}/jline.jar"/>
+  <property name="scala-compiler.jar"
+            value="${lib}/scala-compiler.jar"/>
+  <property name="scala-dbc.jar"
+            value="${lib}/scala-dbc.jar"/>
+  <property name="scala-library.jar"
+            value="${lib}/scala-library.jar"/>
+  <property name="scalap.jar"
+            value="${lib}/scalap.jar"/>
+  <property name="scala-swing.jar"
+            value="${lib}/scala-swing.jar"/>
+
 
   <!-- initialize classpath -->
   <target name="-init">
@@ -40,11 +54,6 @@
       <fileset dir="${lib}">
         <include name="**/*.jar"/>
       </fileset>
-    </path>
-
-    <path id="run.classpath">
-      <path refid="build.classpath"/>
-      <pathelement location="${bin}"/>
     </path>
 
     <taskdef resource="scala/tools/ant/antlib.xml">
@@ -106,8 +115,17 @@
   <target name="run"
           description="run the program"
           depends="build">
-    <java classname="${main}"
-          classpathref="run.classpath">
+
+    <java classname="scala.tools.nsc.MainGenericRunner"
+          fork="true">
+      <jvmarg line="-Xmx256M"/>
+      <jvmarg value="-Xms32M"/>
+      <jvmarg value="-cp"/>
+      <jvmarg value="${jline.jar}:${scala-compiler.jar}:${scala-dbc.jar}:${scala-library.jar}:${scalap.jar}:${scala-swing}.jar:${scala-swing.jar}"/>
+      <jvmarg value="-Dscala.home=/home/yuvi/scala-2.8.0.final"/>
+      <arg value="-cp"/>
+      <arg value="${bin}"/>
+      <arg value="${entrypoint.name}"/>
     </java>
   </target>
 
