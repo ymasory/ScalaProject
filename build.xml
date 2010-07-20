@@ -18,8 +18,8 @@
          name="My awesome Scala program!" 
          basedir=".">
 
+  <!-- !!! CHANGE THIS TO THE NAME OF YOUR SINGLETON OBJECT CONTAINING "main" !!! -->
   <property name="entrypoint.name"
-            <!-- !!! CHANGE THIS TO THE NAME OF YOUR SINGLETON OBJECT CONTAINING "main" !!! -->
             value="MyProgram"/> 
 
   <!-- relative path variables -->
@@ -33,21 +33,6 @@
             location="test"/>
   <property name="doc"
             location="doc"/>
-
-  <!-- Scala libs, spelled out -->
-  <property name="jline.jar"
-            value="${lib}/jline.jar"/>
-  <property name="scala-compiler.jar"
-            value="${lib}/scala-compiler.jar"/>
-  <property name="scala-dbc.jar"
-            value="${lib}/scala-dbc.jar"/>
-  <property name="scala-library.jar"
-            value="${lib}/scala-library.jar"/>
-  <property name="scalap.jar"
-            value="${lib}/scalap.jar"/>
-  <property name="scala-swing.jar"
-            value="${lib}/scala-swing.jar"/>
-
 
   <!-- initialize classpath -->
   <target name="-init">
@@ -118,11 +103,10 @@
           depends="build">
 
     <java classname="scala.tools.nsc.MainGenericRunner"
-          fork="true">
+          fork="true"
+          classpathref="build.classpath">
       <jvmarg line="-Xmx256M"/>
       <jvmarg value="-Xms32M"/>
-      <jvmarg value="-cp"/>
-      <jvmarg value="${jline.jar}:${scala-compiler.jar}:${scala-dbc.jar}:${scala-library.jar}:${scalap.jar}:${scala-swing}.jar:${scala-swing.jar}"/>
       <jvmarg value="-Dscala.home=."/>
       <arg value="-cp"/>
       <arg value="${bin}"/>
