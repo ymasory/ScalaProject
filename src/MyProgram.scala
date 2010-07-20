@@ -9,4 +9,16 @@ object MyProgram {
   def main(args: Array[String]) {
     println("welcome to MyProgram")
   }
+
+  def isSlow(lang: String): Boolean = {
+    val lower = lang.toLowerCase
+    if (lang == "ruby" || lang == "python") true else false
+  }
+
+  def superstitiousSum(x: Int, y: Int): Int = {
+    if (x == 13 || y == 13) throw UnluckyNumberException()
+    else x + y
+  }
+
+  case class UnluckyNumberException() extends Exception
 }
