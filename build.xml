@@ -19,7 +19,8 @@
          basedir=".">
 
   <property name="entrypoint.name"
-            value="MyProgram"/>
+            <!-- !!! CHANGE THIS TO THE NAME OF YOUR SINGLETON OBJECT CONTAINING "main" !!! -->
+            value="MyProgram"/> 
 
   <!-- relative path variables -->
   <property name="bin" 
