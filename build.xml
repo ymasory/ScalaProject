@@ -20,7 +20,7 @@
 
   <!-- If you change the entry point of your program from MyProgram you must change this value! -->
   <property name="entrypoint.name"
-            value="MyProgram"/> 
+            value="com.example.MyProgram"/> 
 
   <!-- relative path variables -->
   <property name="bin" 
@@ -40,6 +40,11 @@
       <fileset dir="${lib}">
         <include name="**/*.jar"/>
       </fileset>
+    </path>
+    
+    <path id="run.classpath">
+      <path refid="build.classpath"/>
+      <pathelement location="${bin}"/>
     </path>
 
     <taskdef resource="scala/tools/ant/antlib.xml">
@@ -95,6 +100,12 @@
   <target name="test"
           depends="build"
           description="run all ScalaTests in /test">
+    <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
+      <classpath refid="run.classpath"/>
+    </taskdef>
+    <scalatest>
+      <suite classname="com.example.MyProgramTest"/>
+    </scalatest>
   </target>
 
   <!-- run program -->

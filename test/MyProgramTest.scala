@@ -1,3 +1,5 @@
+package com.example
+
 import org.scalatest.FunSuite
 
 import com.example.MyProgram._
