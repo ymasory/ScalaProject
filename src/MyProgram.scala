@@ -18,8 +18,8 @@ object MyProgram {
   }
 
   def superstitiousSum(x: Int, y: Int): Int = {
-    if (x == 13 || y == 13) throw UnluckyNumberException()
-    else x + y
+    val sum = x + y
+    if (sum == 13) throw UnluckyNumberException() else sum
   }
 
   case class UnluckyNumberException() extends Exception

@@ -18,8 +18,8 @@ class MyProgramTest extends FunSuite {
   }
 
   test("is superstitous") {
-    intercept[UnluckyNumberException] {
-      superstitiousSum(13, 0)
+    intercept[UnluckyNumberException] {  //states that an exception is required
+      superstitiousSum(7, 6)
     }
   }
 }
