@@ -1,3 +1,5 @@
+package com.example
+
 object MyProgram {
 
   /** This is a sample Scala program
