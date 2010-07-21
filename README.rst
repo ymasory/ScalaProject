@@ -20,9 +20,12 @@ From the command line:
 
 Now fill in your own code and tests!
 
-A little more advanced
-======================
-Coming soon . . .
+Next steps
+==========
+* *How can I change the name/entry point of my project?*
+  You can change the name of MyProgram.scala to whatever you want. The name of the file doesn't matter. If you want to change the name of your entry point object from MyProgram to something else, you need to change the ``entrypoint.name`` property in the ``build.xml`` file from ``com.example.MyProgram`` to something else.
+
+* *How can I add more test files?*
 
 How can I help?
 ===============
