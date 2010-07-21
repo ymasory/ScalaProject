@@ -17,6 +17,7 @@ From the command line:
    | ``ant build        #compile Scala project and tests``
    | ``ant test         #run unit tests``
    | ``ant run          #run Scala project``
+   | ``ant doc          #generate ScalaDocs``
 
 Now fill in your own code and tests!
 
