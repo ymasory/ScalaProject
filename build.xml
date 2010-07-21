@@ -58,16 +58,16 @@
           description="compile Scala source">
     <mkdir dir="${bin}"/>
     <fsc srcdir="${src}"
-            destdir="${bin}"
-            classpathref="build.classpath"
-            deprecation="on"
-            unchecked="on">
+         destdir="${bin}"
+         classpathref="build.classpath"
+         deprecation="on"
+         unchecked="on">
     </fsc>
     <fsc srcdir="${test}"
-            destdir="${bin}"
-            classpathref="build.classpath"
-            deprecation="on"
-            unchecked="on">
+         destdir="${bin}"
+         classpathref="build.classpath"
+         deprecation="on"
+         unchecked="on">
     </fsc>
   </target>
 
@@ -87,7 +87,7 @@
 
   <!-- cleanup -->
   <target name="clean"
-           description="remove compiled scala and documentation files">
+          description="remove compiled scala and documentation files">
     <delete dir="${bin}" 
             quiet="true" 
             failonerror="false"/>
