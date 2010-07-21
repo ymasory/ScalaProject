@@ -57,18 +57,18 @@
           depends="-init" 
           description="compile Scala source">
     <mkdir dir="${bin}"/>
-    <fsc srcdir="${src}"
+    <scalac srcdir="${src}"
          destdir="${bin}"
          classpathref="build.classpath"
          deprecation="on"
          unchecked="on">
-    </fsc>
-    <fsc srcdir="${test}"
+    </scalac>
+    <scalac srcdir="${test}"
          destdir="${bin}"
-         classpathref="build.classpath"
+         classpathref="run.classpath"
          deprecation="on"
          unchecked="on">
-    </fsc>
+    </scalac>
   </target>
 
   <!-- generate docs -->
