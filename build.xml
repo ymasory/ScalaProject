@@ -40,16 +40,12 @@
       <fileset dir="${lib}">
         <include name="**/*.jar"/>
       </fileset>
+      <pathelement location="${bin}"/>
     </path>
     
     <taskdef resource="scala/tools/ant/antlib.xml">
       <classpath refid="build.classpath"/>
     </taskdef>
-
-    <path id="run.classpath">
-      <path refid="build.classpath"/>
-      <pathelement location="${bin}"/>
-    </path>
   </target>
 
   <!-- compile program -->
@@ -65,7 +61,7 @@
     </scalac>
     <scalac srcdir="${test}"
          destdir="${bin}"
-         classpathref="run.classpath"
+         classpathref="build.classpath"
          deprecation="on"
          unchecked="on">
     </scalac>
@@ -101,7 +97,7 @@
           depends="build"
           description="run all ScalaTests in /test">
     <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
-      <classpath refid="run.classpath"/>
+      <classpath refid="build.classpath"/>
     </taskdef>
     <scalatest>
       <suite classname="com.example.MyProgramTest"/>
