@@ -30,4 +30,4 @@ Next steps
 
 How can I help?
 ===============
-I created this project because I had trouble getting Scala integrated with ScalaTest and Ant. Some of the documentation out there is wrong or out of date. You can contribute back by improving the provided build.xml. I'm no Ant expert. Also, you might consider making a similar Scala dummy project for other build automation systems or testing frameworks.
+I created this project because I had trouble getting Scala integrated with ScalaTest and Ant. Some of the documentation out there is wrong or out of date. You can contribute back by improving the provided build.xml.
