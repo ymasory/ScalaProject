@@ -1,5 +1,5 @@
 =============
-Scala Project
+ScalaProject
 =============
 
 Purpose
