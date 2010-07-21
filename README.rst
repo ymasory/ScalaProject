@@ -26,7 +26,8 @@ Next steps
   You can change the name of MyProgram.scala to whatever you want. The name of the file doesn't matter. If you want to change the name of your entry point object from MyProgram to something else, you need to change the ``entrypoint.name`` property in the ``build.xml`` file from ``com.example.MyProgram`` to something else.
 
 * *How can I add more test files?*
+  Working on an easy way to allow that . . .
 
 How can I help?
 ===============
-I created this project because I had trouble getting Scala integrated with ScalaTest and Ant. Some of the documentation out there is wrong or out of date. You can contribute back by improving the provided build.xml. I'm no Ant expert. Also, you might consider making a similar Scala dummy project for other build automation systems.
+I created this project because I had trouble getting Scala integrated with ScalaTest and Ant. Some of the documentation out there is wrong or out of date. You can contribute back by improving the provided build.xml. I'm no Ant expert. Also, you might consider making a similar Scala dummy project for other build automation systems or testing frameworks.
