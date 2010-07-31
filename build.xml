@@ -18,9 +18,13 @@
          name="My awesome Scala program!" 
          basedir=".">
 
-  <!-- If you change the entry point of your program from MyProgram you must change this value! -->
+  <!-- If you change the entry point of your program from com.example.MyProgram you must change this value! -->
   <property name="entrypoint.name"
-            value="com.example.MyProgram"/> 
+            value="com.example.MyProgram"/>
+
+  <!-- If you change the package of your tests from com.example you must change this value! -->
+  <property name="test.package"
+            value="com.example"/>
 
   <!-- relative path variables -->
   <property name="bin" 
@@ -95,12 +99,12 @@
   <!-- run unit tests -->
   <target name="test"
           depends="build"
-          description="run all ScalaTests in /test">
+          description="run all ScalaTests ${test.package}">
     <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
       <classpath refid="build.classpath"/>
     </taskdef>
     <scalatest>
-      <suite classname="com.example.MyProgramTest"/>
+      <membersonly package="${test.package}"/>
     </scalatest>
   </target>
 

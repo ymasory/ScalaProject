@@ -27,7 +27,10 @@ Next steps
   You can change the name of MyProgram.scala to whatever you want. The name of the file doesn't matter. If you want to change the name of your entry point object from MyProgram to something else, you need to change the ``entrypoint.name`` property in the ``build.xml`` file from ``com.example.MyProgram`` to something else.
 
 * *How can I add more test files?*
-  Working on an easy way to allow that . . .
+  So long as your tests are in the package ``com.example`` (like the provided example test suite) they will run. If you want to change the location of your tests to some other package you need to change the ``test.package`` property in the ``build.xml`` file.
+
+* *Compiling is so slow! How can I speed things up?*
+  Try replacing the ``scalac`` tags in the ``build.xml`` file with ``fsc`` ones. But be warned, ``fsc`` fails on some computers.
 
 How can I help?
 ===============
