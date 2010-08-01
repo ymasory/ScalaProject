@@ -103,7 +103,7 @@
     <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
       <classpath refid="build.classpath"/>
     </taskdef>
-    <scalatest>
+    <scalatest runpath="${bin}">
       <membersonly package="${test.package}"/>
     </scalatest>
   </target>
