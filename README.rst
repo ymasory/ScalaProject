@@ -30,7 +30,7 @@ Next steps
   So long as your tests are in the package ``com.example`` (like the provided example test suite) they will run. If you want to change the location of your tests to some other package you need to change the ``test.package`` property in the ``build.xml`` file.
 
 * *Compiling is so slow! How can I speed things up?*
-  Try replacing the ``scalac`` tags in the ``build.xml`` file with ``fsc`` ones. But be warned, ``fsc`` fails on some computers.
+  Try replacing the ``scalac`` tags in the ``build.xml`` file with ``fsc`` ones. But be warned, ``fsc`` fails on some computers. It's also buggy. But hey, I still try to use it when I can.
 
 How can I help?
 ===============
