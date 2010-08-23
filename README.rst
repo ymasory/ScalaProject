@@ -5,6 +5,7 @@ ScalaProject
 Purpose
 =======
 This project is a "dummy" Scala project you can use as a starting point for your Scala project. It includes the Scala library and is already integrated with Ant and ScalaTest.
+*NOTE: I have switched to SBT as of August 2010. If you use this project you are advised to make sure the Scala and ScalaTest jars are the latest.*
 
 Getting started
 ===============
