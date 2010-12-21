@@ -5,7 +5,7 @@ ScalaProject
 Purpose
 =======
 This project is a "dummy" Scala project you can use as a starting point for your Scala project. It includes the Scala library and is already integrated with Ant and ScalaTest.
-**NOTE: I have switched to simple-build-tool as of August 2010. If you use this project you are advised to make sure the Scala and ScalaTest jars are the latest, or update the Ant file to use Ivy.See https://github.com/ymasory/sbt-prototype for my new prototype project, using sbt and Ensime.**
+**NOTE: I have switched to simple-build-tool as of August 2010. If you use this project you are advised to make sure the Scala and ScalaTest jars are the latest, or update the Ant file to use Ivy. See https://github.com/ymasory/sbt-prototype for my new prototype project, using sbt and Ensime.**
 
 Getting started
 ===============
